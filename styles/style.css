@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-Bold.woff') format('woff');
+}
+
+body {
+    background: hsl(218, 23%, 16%);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.advice-block {
+    max-width: 90%;
+}
+.advice-block__text {
+    font-size: 20px;
+}
+.advice-block__hr.mobile {
+    display: block;
+    width: 100%;
+}
+.advice-block__hr:not(.mobile) {
+    display: none;
+}
+
+@media screen and (min-width: 769px) {
+    .advice-block {
+        max-width: 540px;
+    }
+    .advice-block__text {
+        font-size: 30px;
+    }
+    .advice-block__hr.mobile {
+        display: none;
+    }
+    .advice-block__hr:not(.mobile) {
+        display: block;
+    }
+}
+
+.advice-block {
+    background-color: hsl(217, 19%, 24%);
+    padding: 1.5rem;
+    font-family: 'Manrope';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+    margin: 0 10px;
+}
+.advice-block__id {
+    color: hsl(150, 100%, 66%);
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.advice-block__text {
+    color: hsl(193, 38%, 86%);
+    text-align: center;
+    margin: 1em auto 1em auto;
+}
+.advice-block__text::before {
+    content: '«';
+}
+.advice-block__text::after {
+    content: '»';
+}
+.advice-block__button {
+    border: none;
+    border-radius: 50%;
+    background-color: #52ffa8;
+    width: 40px;
+    height: 40px;
+    padding: 2.4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    cursor: pointer;
+    transition: .3s ease;
+}
+.advice-block__button:hover {
+    box-shadow: 0px 0px 30px 5px rgba(82, 255, 168, 0.502);
+}
+
+.advice-block__button img.spin {
+    transition: .8s transform;
+    transform: rotate(360deg);
+}
+
+.advice-block__hr {
+    margin: .5em auto 3em auto;
+}
